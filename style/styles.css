@@ -1,0 +1,12 @@
+/* Urban-Rise basic styles */
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+.header { background: #2c3e50; color: #fff; padding: 10px; position: fixed; top: 0; width: 100%; }
+.header nav a { color: #fff; margin: 0 10px; text-decoration: none; }
+.header nav a:hover { text-decoration: underline; }
+main { margin-top: 70px; padding: 20px; }
+footer { background: #2c3e50; color: #fff; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
+.sidebar { position: fixed; left: -250px; top: 0; width: 250px; height: 100%; background: #34495e; color: #fff; transition: left 0.3s ease; padding-top: 60px; }
+.sidebar.active { left: 0; }
+.sidebar-links { list-style: none; padding: 0; }
+.sidebar-links li { margin: 20px; }
+.sidebar-links a { color: #fff; text-decoration: none; }
