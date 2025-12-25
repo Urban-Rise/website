@@ -1,12 +1,104 @@
 /* Urban-Rise basic styles */
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-.header { background: #2c3e50; color: #fff; padding: 10px; position: fixed; top: 0; width: 100%; }
-.header nav a { color: #fff; margin: 0 10px; text-decoration: none; }
-.header nav a:hover { text-decoration: underline; }
-main { margin-top: 70px; padding: 20px; }
-footer { background: #2c3e50; color: #fff; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%; }
-.sidebar { position: fixed; left: -250px; top: 0; width: 250px; height: 100%; background: #34495e; color: #fff; transition: left 0.3s ease; padding-top: 60px; }
-.sidebar.active { left: 0; }
-.sidebar-links { list-style: none; padding: 0; }
-.sidebar-links li { margin: 20px; }
-.sidebar-links a { color: #fff; text-decoration: none; }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f6f8; /* خلفية فاتحة لزيادة التباين */
+  color: #1e2a38;
+}
+
+/* Header */
+.header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  max-width: 160px;
+  margin-right: 12px;
+  vertical-align: middle;
+  object-fit: contain;
+}
+
+.header-nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.header-nav a:hover {
+  text-decoration: underline;
+  color: #e74c3c; /* أحمر للتفاعل */
+}
+
+/* Main Content */
+main {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #34495e;
+  color: #fff;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+}
+.sidebar.active {
+  left: 0;
+}
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+.sidebar-links li {
+  margin: 20px;
+}
+.sidebar-links a {
+  color: #fff;
+  text-decoration: none;
+}
+.sidebar-links a:hover {
+  color: #e74c3c;
+}
+
+/* Store link styling */
+.store-link {
+  color: #1e2a38;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.store-link:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #e74c3c;
+}
