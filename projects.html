@@ -2,27 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects - Urban-Rise</title>
-  <link rel="stylesheet" href="../style/styles.css">
-  <script src="../scripts/script.js" defer></script>
+  <title data-key="projectsTitle">Projects - Urban-Rise</title>
+  <link rel="stylesheet" href="style/styles.css">
+  <script src="scripts/script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header class="header">
-    <h1>Urban-Rise Alliance</h1>
-    <nav>
-      <a href="home.html">Home</a> |
-      <a href="projects.html">Projects</a> |
-      <a href="community.html">Community</a> |
-      <a href="docs.html">Docs</a> |
-      <a href="contact.html">Contact</a>
+  <!-- Header -->
+  <header class="header glass">
+    <div class="logo-area">
+      <img src="assets/images/maba_logo.extended.png" alt="MABA Logo" class="logo-img" />
+      <h2 data-key="title">Urban-Rise Alliance</h2>
+    </div>
+    <nav class="header-nav">
+      <a href="home.html"><i class="fas fa-home"></i><span data-key="home"></span></a>
+      <a href="projects.html"><i class="fas fa-diagram-project"></i><span data-key="projects"></span></a>
+      <a href="community.html"><i class="fas fa-users"></i><span data-key="community"></span></a>
+      <a href="docs.html"><i class="fas fa-book"></i><span data-key="docs"></span></a>
+      <a href="contact.html"><i class="fas fa-envelope"></i><span data-key="contact"></span></a>
+      <a href="../Smart-Store/index.html"><i class="fas fa-store"></i><span data-key="store"></span></a>
     </nav>
+    <div class="lang-switch">
+      <button id="lang-en">EN</button>
+      <button id="lang-ar">AR</button>
+    </div>
   </header>
-  <main>
-    <h2>Projects</h2>
-    <p>Explore Urban-Rise projects and smart urban solutions.</p>
+
+  <!-- Main Content -->
+  <main class="dashboard">
+    <!-- مشروع مركز تطوير النماذج -->
+    <section class="card scrollable">
+      <h3 data-key="modelCenterTitle">🏭 Center for Model Development</h3>
+      <p data-key="modelCenterIntro">
+        National hub for innovation, manufacturing, and community empowerment.
+      </p>
+      <ul>
+        <li data-key="objective1">200 prototypes in 5 years</li>
+        <li data-key="objective2">25 STEM units in schools</li>
+        <li data-key="objective3">500 new jobs</li>
+        <li data-key="objective4">10 patents in 3 years</li>
+      </ul>
+      <button>Explore</button>
+    </section>
+
+    <!-- مشروع UrbanTune -->
+    <section class="card scrollable">
+      <h3 data-key="urbanTuneTitle">🌆 UrbanTune – المدينة الرمزية</h3>
+      <p data-key="urbanTuneIntro">
+        Symbolic urban city project integrating technology, sustainability, and social empowerment.
+      </p>
+      <ul>
+        <li data-key="urbanObjective1">Reduce carbon emissions</li>
+        <li data-key="urbanObjective2">Smart mobility & clean energy</li>
+        <li data-key="urbanObjective3">Strategic partnerships</li>
+      </ul>
+      <button>View Plan</button>
+    </section>
+
+    <!-- مشروع الذكاء الاصطناعي -->
+    <section class="card scrollable">
+      <h3 data-key="aiLabTitle">🤖 AI Lab Projects</h3>
+      <p data-key="aiLabIntro">
+        AI applications for industry and education, including image classification and smart kiosks.
+      </p>
+      <ul>
+        <li data-key="aiObjective1">Flower classifier (Oxford dataset)</li>
+        <li data-key="aiObjective2">Smart product recognition</li>
+        <li data-key="aiObjective3">Integration with Smart-Store</li>
+      </ul>
+      <button>Discover</button>
+    </section>
+
+    <!-- رقم التطوير -->
+    <div class="dev-id">#003</div>
   </main>
-  <footer>
-    <p>&copy; 2025 Urban-Rise Alliance</p>
+
+  <!-- Footer -->
+  <footer class="footer glass">
+    <p>&copy; 2025 Urban-Rise Alliance. <span data-key="rights"></span></p>
+    <p><a href="../Smart-Store/index.html" class="store-link">🛒 <span data-key="store"></span></a></p>
   </footer>
 </body>
 </html>
