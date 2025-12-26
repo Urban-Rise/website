@@ -1,17 +1,25 @@
-/* Urban-Rise basic styles */
+/* Urban-Rise enhanced styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f6f8; /* خلفية فاتحة لزيادة التباين */
+  background: linear-gradient(135deg, #f4f6f8, #d9e4ec);
   color: #1e2a38;
+}
+
+/* تأثير الزجاجية */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Header */
 .header {
   background: #2c3e50;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 24px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -19,32 +27,42 @@ body {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 
 .logo-img {
   height: 48px;
-  width: auto;
   max-width: 160px;
   margin-right: 12px;
-  vertical-align: middle;
   object-fit: contain;
 }
 
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
 .header-nav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   color: #fff;
-  margin: 0 10px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
 }
 .header-nav a:hover {
-  text-decoration: underline;
-  color: #e74c3c; /* أحمر للتفاعل */
+  background: rgba(255, 255, 255, 0.2);
+  color: #e74c3c;
 }
 
 /* Main Content */
 main {
-  margin-top: 80px;
+  margin-top: 90px;
   padding: 20px;
+  text-align: center;
 }
 
 /* Footer */
@@ -52,11 +70,12 @@ footer {
   background: #2c3e50;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 12px;
   position: fixed;
   bottom: 0;
   width: 100%;
   font-size: 14px;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
 }
 
 /* Sidebar */
@@ -70,6 +89,7 @@ footer {
   color: #fff;
   transition: left 0.3s ease;
   padding-top: 60px;
+  z-index: 999;
 }
 .sidebar.active {
   left: 0;
@@ -84,6 +104,7 @@ footer {
 .sidebar-links a {
   color: #fff;
   text-decoration: none;
+  font-size: 16px;
 }
 .sidebar-links a:hover {
   color: #e74c3c;
@@ -93,12 +114,43 @@ footer {
 .store-link {
   color: #1e2a38;
   background-color: rgba(255, 255, 255, 0.85);
-  padding: 4px 8px;
+  padding: 6px 12px;
   border-radius: 6px;
   font-weight: bold;
   text-decoration: none;
+  transition: background 0.3s, color 0.3s;
 }
 .store-link:hover {
   background-color: rgba(255, 255, 255, 1);
   color: #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .header-nav {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .header-nav a {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  main {
+    margin-top: 120px;
+    padding: 16px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
