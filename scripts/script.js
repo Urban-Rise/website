@@ -22,15 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function setLanguage(lang) {
     try {
-      const response = await fetch(`lang_${lang}.json`);
+      // المسار الصحيح للملفات داخل مجلد lang/
+      const response = await fetch(`lang/lang_${lang}.json`);
       const translations = await response.json();
+
       document.querySelectorAll("[data-key]").forEach(el => {
         const key = el.getAttribute("data-key");
         if (translations[key]) {
           el.textContent = translations[key];
         }
       });
-      // اتجاه الصفحة
+
+      // ضبط اتجاه الصفحة
       document.body.dir = (lang === "ar") ? "rtl" : "ltr";
       document.documentElement.lang = lang;
     } catch (err) {
@@ -38,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // ربط الأزرار
   if (langButtons.en) langButtons.en.addEventListener('click', () => setLanguage('en'));
   if (langButtons.ar) langButtons.ar.addEventListener('click', () => setLanguage('ar'));
 
