@@ -1,3 +1,187 @@
+/* Urban-Rise full style sheet */
+
+/* الأساسيات */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f4f6f8, #d9e4ec);
+  color: #1e2a38;
+  overflow-y: auto;
+}
+
+/* تأثير الزجاجية */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* الهيدر */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 72px; /* تقليل ارتفاع الهيدر */
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #2c3e50;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.logo-img {
+  height: 48px;       /* حجم متوازن */
+  max-width: 140px;   /* منع التمدد الزائد */
+  width: auto;
+  object-fit: contain;
+  margin-right: 12px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.header-nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #e74c3c;
+}
+
+/* زر اللغة */
+.lang-switch button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #0078d7;
+  color: white;
+  font-weight: bold;
+}
+
+.lang-switch button:hover {
+  background: #005a9e;
+}
+
+/* المحتوى الرئيسي */
+main {
+  margin-top: 100px; /* تعويض الهيدر */
+  margin-bottom: 80px; /* تعويض الفوتر */
+  padding: 20px;
+  text-align: center;
+  min-height: calc(100vh - 180px);
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  text-decoration: none;
+  color: #1e2a38;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cta:hover {
+  background: rgba(255, 255, 255, 1);
+  color: #e74c3c;
+}
+
+.dev-id {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* الفوتر */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-size: 14px;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+}
+
+/* روابط المتجر */
+.store-link {
+  color: #1e2a38;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.store-link:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #e74c3c;
+}
+
+/* الشريط الجانبي */
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #34495e;
+  color: #fff;
+  transition: left 0.3s ease;
+  padding-top: 80px;
+  z-index: 999;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-links li {
+  margin: 20px;
+}
+
+.sidebar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebar-links a:hover {
+  color: #e74c3c;
+}
+
 /* Dashboard layout for community.html */
 .dashboard {
   display: flex;
@@ -5,13 +189,16 @@
   padding: 20px;
   margin-top: 100px;   /* تعويض الهيدر */
   margin-bottom: 80px; /* تعويض الفوتر */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
   flex: 1;
+  min-width: 250px;
   background: rgba(255,255,255,0.85);
   border-radius: 12px;
-  padding: 16px;
+  padding: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
@@ -42,13 +229,16 @@
 }
 
 .card button {
-  padding: 4px 10px;
+  padding: 6px 14px;
   border: none;
   border-radius: 6px;
   background: #0078d7;
   color: #fff;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .card button:hover {
@@ -61,8 +251,43 @@
   overflow-y: auto;
 }
 
-/* Responsive for mobile */
+/* الهواتف */
 @media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+    height: auto;
+  }
+
+  .logo-img {
+    height: 40px;
+    max-width: 120px;
+  }
+
+  .header-nav {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .header-nav a {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  main {
+    margin-top: 140px;
+    margin-bottom: 100px;
+    padding: 16px;
+  }
+
+  .footer {
+    font-size: 12px;
+    padding: 8px;
+    height: auto;
+  }
+
   .dashboard {
     flex-direction: column;
   }
