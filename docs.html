@@ -2,27 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Docs - Urban-Rise</title>
-  <link rel="stylesheet" href="../style/styles.css">
-  <script src="../scripts/script.js" defer></script>
+  <title data-key="docsTitle">Docs - Urban-Rise</title>
+  <link rel="stylesheet" href="style/styles.css">
+  <script src="scripts/script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header class="header">
-    <h1>Urban-Rise Alliance</h1>
-    <nav>
-      <a href="home.html">Home</a> |
-      <a href="projects.html">Projects</a> |
-      <a href="community.html">Community</a> |
-      <a href="docs.html">Docs</a> |
-      <a href="contact.html">Contact</a>
+  <!-- Header -->
+  <header class="header glass">
+    <div class="logo-area">
+      <img src="assets/images/maba_logo.extended.png" alt="MABA Logo" class="logo-img" />
+      <h2 data-key="title">Urban-Rise Alliance</h2>
+    </div>
+    <nav class="header-nav">
+      <a href="home.html"><i class="fas fa-home"></i><span data-key="home"></span></a>
+      <a href="projects.html"><i class="fas fa-diagram-project"></i><span data-key="projects"></span></a>
+      <a href="community.html"><i class="fas fa-users"></i><span data-key="community"></span></a>
+      <a href="docs.html"><i class="fas fa-book"></i><span data-key="docs"></span></a>
+      <a href="contact.html"><i class="fas fa-envelope"></i><span data-key="contact"></span></a>
+      <a href="../Smart-Store/index.html"><i class="fas fa-store"></i><span data-key="store"></span></a>
     </nav>
+    <div class="lang-switch">
+      <button id="lang-en">EN</button>
+      <button id="lang-ar">AR</button>
+    </div>
   </header>
-  <main>
-    <h2>Documentation</h2>
-    <p>Find resources and guides for developers and community members.</p>
+
+  <!-- Main Content -->
+  <main class="dashboard">
+    <!-- الأثر البيئي والتكنولوجي -->
+    <section class="card scrollable">
+      <h3 data-key="envImpactTitle">🌱 Environmental & Technological Impact</h3>
+      <p data-key="envImpactIntro">
+        Learn how Urban-Rise projects reduce emissions, integrate clean energy, and adopt innovative technologies.
+      </p>
+      <ul>
+        <li data-key="envImpact1">Reduce carbon emissions</li>
+        <li data-key="envImpact2">Adopt sustainable production practices</li>
+        <li data-key="envImpact3">Integrate smart mobility solutions</li>
+      </ul>
+      <button>View Report</button>
+    </section>
+
+    <!-- الخطة المالية -->
+    <section class="card scrollable">
+      <h3 data-key="financePlanTitle">💰 Financial Plan</h3>
+      <p data-key="financePlanIntro">
+        Explore financial projections, cumulative performance, and funding strategies for sustainable growth.
+      </p>
+      <ul>
+        <li data-key="finance1">Startup costs analysis</li>
+        <li data-key="finance2">Projected cumulative performance</li>
+        <li data-key="finance3">Funding & investment strategies</li>
+      </ul>
+      <button>View Details</button>
+    </section>
+
+    <!-- خطة الطوارئ وإدارة الأزمات -->
+    <section class="card scrollable">
+      <h3 data-key="crisisPlanTitle">⚠️ Crisis & Emergency Management</h3>
+      <p data-key="crisisPlanIntro">
+        Understand risk assessments, mitigation measures, and alternative strategies for resilience.
+      </p>
+      <ul>
+        <li data-key="crisis1">Threats & risk evaluation</li>
+        <li data-key="crisis2">Preventive measures</li>
+        <li data-key="crisis3">Alternative solutions</li>
+      </ul>
+      <button>View Plan</button>
+    </section>
+
+    <!-- التحليل الاستراتيجي -->
+    <section class="card scrollable">
+      <h3 data-key="strategicAnalysisTitle">📊 Strategic Analysis</h3>
+      <p data-key="strategicAnalysisIntro">
+        Review SWOT analysis and strategic insights guiding Urban-Rise initiatives.
+      </p>
+      <ul>
+        <li data-key="swot1">Strengths</li>
+        <li data-key="swot2">Weaknesses</li>
+        <li data-key="swot3">Opportunities</li>
+        <li data-key="swot4">Threats</li>
+      </ul>
+      <button>View Analysis</button>
+    </section>
+
+    <!-- رقم التطوير -->
+    <div class="dev-id">#004</div>
   </main>
-  <footer>
-    <p>&copy; 2025 Urban-Rise Alliance</p>
+
+  <!-- Footer -->
+  <footer class="footer glass">
+    <p>&copy; 2025 Urban-Rise Alliance. <span data-key="rights"></span></p>
+    <p><a href="../Smart-Store/index.html" class="store-link">🛒 <span data-key="store"></span></a></p>
   </footer>
 </body>
 </html>
