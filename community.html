@@ -2,98 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title data-key="communityTitle">Community - Urban-Rise</title>
+  <title>Community - Urban-Rise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style/styles.css">
   <script src="scripts/script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f1320;
+      color: #e8eefc;
+    }
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+    .card {
+      background: #131a2a;
+      border: 1px solid #243252;
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #4f6cff;
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 18px;
+      color: #ffffff;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .card ul li {
+      margin: 8px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card button {
+      background: #31c3ba;
+      border: none;
+      border-radius: 8px;
+      padding: 6px 12px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background: #27aeae;
+    }
+    footer {
+      background: #131a2a;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 13px;
+      color: #9fb3d9;
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header class="header glass">
     <div class="logo-area">
       <img src="assets/images/maba_logo.extended.png" alt="MABA Logo" class="logo-img" />
-      <h2 data-key="title">Urban-Rise Alliance</h2>
+      <h2>Urban-Rise Alliance</h2>
     </div>
     <nav class="header-nav">
-      <a href="home.html"><i class="fas fa-home"></i><span data-key="home"></span></a>
-      <a href="projects.html"><i class="fas fa-diagram-project"></i><span data-key="projects"></span></a>
-      <a href="community.html"><i class="fas fa-users"></i><span data-key="community"></span></a>
-      <a href="docs.html"><i class="fas fa-book"></i><span data-key="docs"></span></a>
-      <a href="contact.html"><i class="fas fa-envelope"></i><span data-key="contact"></span></a>
-      <a href="../Smart-Store/index.html"><i class="fas fa-store"></i><span data-key="store"></span></a>
+      <a href="home.html"><i class="fas fa-home"></i> Home</a>
+      <a href="community.html"><i class="fas fa-users"></i> Community</a>
+      <a href="docs.html"><i class="fas fa-book"></i> Docs</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+      <a href="../Smart-Store/index.html"><i class="fas fa-store"></i> Store</a>
     </nav>
-    <div class="lang-switch">
-      <button id="lang-en">EN</button>
-      <button id="lang-ar">AR</button>
-    </div>
   </header>
 
   <!-- Dashboard Content -->
   <main class="dashboard">
-    <!-- مراحل الرحلة -->
-    <section class="card scrollable">
-      <h3 data-key="journeyTitle">🌍 Journey</h3>
+    <!-- Journey -->
+    <section class="card">
+      <h3>🌍 Journey</h3>
       <ul>
-        <li><span data-key="stage1">Awareness</span> <button>Explore</button></li>
-        <li><span data-key="stage2">Engagement</span> <button>Explore</button></li>
-        <li><span data-key="stage3">Collaboration</span> <button>Explore</button></li>
-        <li><span data-key="stage4">Innovation</span> <button>Explore</button></li>
-        <li><span data-key="stage5">Implementation</span> <button>Explore</button></li>
-        <li><span data-key="stage6">Sustainability</span> <button>Explore</button></li>
+        <li>Awareness <button>Explore</button></li>
+        <li>Engagement <button>Explore</button></li>
+        <li>Collaboration <button>Explore</button></li>
+        <li>Innovation <button>Explore</button></li>
+        <li>Implementation <button>Explore</button></li>
+        <li>Sustainability <button>Explore</button></li>
       </ul>
     </section>
 
-    <!-- مجموعات المجتمع -->
-    <section class="card scrollable">
-      <h3 data-key="groupsTitle">👥 Groups</h3>
+    <!-- Groups -->
+    <section class="card">
+      <h3>👥 Groups</h3>
       <ul>
-        <li><span data-key="group1">Youth Innovators</span> <button>Join</button></li>
-        <li><span data-key="group2">Eco-Pioneers</span> <button>Join</button></li>
-        <li><span data-key="group3">Tech Builders</span> <button>Join</button></li>
+        <li>Youth Innovators <button>Join</button></li>
+        <li>Eco-Pioneers <button>Join</button></li>
+        <li>Tech Builders <button>Join</button></li>
       </ul>
     </section>
 
-    <!-- خطوات المشاركة -->
-    <section class="card scrollable">
-      <h3 data-key="stepsTitle">🚀 Participate</h3>
+    <!-- Participate -->
+    <section class="card">
+      <h3>🚀 Participate</h3>
       <ul>
-        <li data-key="step1">Register</li>
-        <li data-key="step2">Join a group</li>
-        <li data-key="step3">Contribute</li>
-        <li data-key="step4">Share ideas</li>
+        <li>Register</li>
+        <li>Join a group</li>
+        <li>Contribute</li>
+        <li>Share ideas</li>
       </ul>
     </section>
 
-    <!-- الأنشطة والفعاليات -->
-    <section class="card scrollable">
-      <h3 data-key="eventsTitle">🎉 Events & Activities</h3>
-      <p data-key="eventsIntro">Join hackathons, workshops, and community meetups to co-create solutions.</p>
+    <!-- Events -->
+    <section class="card">
+      <h3>🎉 Events & Activities</h3>
+      <p>Join hackathons, workshops, and community meetups to co-create solutions.</p>
       <ul>
-        <li data-key="event1">Hackathon: Smart Urban Solutions <button>Register</button></li>
-        <li data-key="event2">Workshop: Renewable Energy in Industry <button>Join</button></li>
-        <li data-key="event3">Community Meetup: Youth & Innovation <button>Attend</button></li>
+        <li>Hackathon: Smart Urban Solutions <button>Register</button></li>
+        <li>Workshop: Renewable Energy in Industry <button>Join</button></li>
+        <li>Community Meetup: Youth & Innovation <button>Attend</button></li>
       </ul>
     </section>
 
-    <!-- قصص النجاح -->
-    <section class="card scrollable">
-      <h3 data-key="successStoriesTitle">🌟 Success Stories</h3>
-      <p data-key="successStoriesIntro">Discover inspiring stories from youth, innovators, and startups empowered by Urban-Rise.</p>
+    <!-- Success Stories -->
+    <section class="card">
+      <h3>🌟 Success Stories</h3>
+      <p>Discover inspiring stories from youth, innovators, and startups empowered by Urban-Rise.</p>
       <ul>
-        <li data-key="story1">Youth Innovators launched 3 eco-friendly products <button>Read</button></li>
-        <li data-key="story2">Startup reduced industrial waste by 30% <button>Read</button></li>
-        <li data-key="story3">Community hackathon created 5 working prototypes <button>Read</button></li>
+        <li>Youth Innovators launched 3 eco-friendly products <button>Read</button></li>
+        <li>Startup reduced industrial waste by 30% <button>Read</button></li>
+        <li>Community hackathon created 5 working prototypes <button>Read</button></li>
       </ul>
     </section>
-
-    <!-- رقم التطوير -->
-    <div class="dev-id">#002</div>
   </main>
 
   <!-- Footer -->
-  <footer class="footer glass">
-    <p>&copy; 2025 Urban-Rise Alliance. <span data-key="rights"></span></p>
-    <p><a href="../Smart-Store/index.html" class="store-link">🛒 <span data-key="store"></span></a></p>
+  <footer>
+    <p>&copy; 2025 Urban-Rise Alliance</p>
+    <p><a href="../Smart-Store/index.html" class="store-link">🛒 Store</a></p>
   </footer>
 </body>
 </html>
