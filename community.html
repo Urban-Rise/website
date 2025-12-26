@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style/styles.css">
   <script src="scripts/script.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
       margin: 0;
@@ -35,6 +34,13 @@
       margin-top: 0;
       font-size: 18px;
       color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card h3 img.icon {
+      width: 20px;
+      height: 20px;
     }
     .card ul {
       list-style: none;
@@ -76,11 +82,11 @@
       <h2>Urban-Rise Alliance</h2>
     </div>
     <nav class="header-nav">
-      <a href="home.html"><i class="fas fa-home"></i> Home</a>
-      <a href="community.html"><i class="fas fa-users"></i> Community</a>
-      <a href="docs.html"><i class="fas fa-book"></i> Docs</a>
-      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
-      <a href="../Smart-Store/index.html"><i class="fas fa-store"></i> Store</a>
+      <a href="home.html">Home</a>
+      <a href="community.html">Community</a>
+      <a href="docs.html">Docs</a>
+      <a href="contact.html">Contact</a>
+      <a href="../Smart-Store/index.html">Store</a>
     </nav>
   </header>
 
@@ -88,7 +94,7 @@
   <main class="dashboard">
     <!-- Journey -->
     <section class="card">
-      <h3>🌍 Journey</h3>
+      <h3><img src="assets/images/icon-journey.png" alt="Journey Icon" class="icon"> Journey</h3>
       <ul>
         <li>Awareness <button>Explore</button></li>
         <li>Engagement <button>Explore</button></li>
@@ -101,7 +107,7 @@
 
     <!-- Groups -->
     <section class="card">
-      <h3>👥 Groups</h3>
+      <h3><img src="assets/images/icon-groups.png" alt="Groups Icon" class="icon"> Groups</h3>
       <ul>
         <li>Youth Innovators <button>Join</button></li>
         <li>Eco-Pioneers <button>Join</button></li>
@@ -111,7 +117,7 @@
 
     <!-- Participate -->
     <section class="card">
-      <h3>🚀 Participate</h3>
+      <h3><img src="assets/images/icon-participate.png" alt="Participate Icon" class="icon"> Participate</h3>
       <ul>
         <li>Register</li>
         <li>Join a group</li>
@@ -122,7 +128,7 @@
 
     <!-- Events -->
     <section class="card">
-      <h3>🎉 Events & Activities</h3>
+      <h3><img src="assets/images/icon-events.png" alt="Events Icon" class="icon"> Events & Activities</h3>
       <p>Join hackathons, workshops, and community meetups to co-create solutions.</p>
       <ul>
         <li>Hackathon: Smart Urban Solutions <button>Register</button></li>
@@ -133,7 +139,7 @@
 
     <!-- Success Stories -->
     <section class="card">
-      <h3>🌟 Success Stories</h3>
+      <h3><img src="assets/images/icon-success.png" alt="Success Icon" class="icon"> Success Stories</h3>
       <p>Discover inspiring stories from youth, innovators, and startups empowered by Urban-Rise.</p>
       <ul>
         <li>Youth Innovators launched 3 eco-friendly products <button>Read</button></li>
@@ -146,7 +152,7 @@
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Urban-Rise Alliance</p>
-    <p><a href="../Smart-Store/index.html" class="store-link">🛒 Store</a></p>
+    <p><a href="../Smart-Store/index.html" class="store-link">Store</a></p>
   </footer>
 </body>
 </html>
