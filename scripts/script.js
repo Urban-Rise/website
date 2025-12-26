@@ -6,12 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeSidebar = document.getElementById('close-sidebar');
 
   if (menuToggle && sidebar && closeSidebar) {
-    menuToggle.addEventListener('click', () => {
-      sidebar.classList.add('active');
-    });
-    closeSidebar.addEventListener('click', () => {
-      sidebar.classList.remove('active');
-    });
+    menuToggle.addEventListener('click', () => sidebar.classList.add('active'));
+    closeSidebar.addEventListener('click', () => sidebar.classList.remove('active'));
   }
 
   // Bilingual support
@@ -22,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function setLanguage(lang) {
     try {
-      // المسار الصحيح للملفات داخل مجلد lang/
       const response = await fetch(`lang/lang_${lang}.json`);
       const translations = await response.json();
 
@@ -33,18 +28,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // ضبط اتجاه الصفحة
       document.body.dir = (lang === "ar") ? "rtl" : "ltr";
       document.documentElement.lang = lang;
+
+      // حفظ اللغة المختارة
+      localStorage.setItem("preferredLang", lang);
     } catch (err) {
       console.error("Language file error:", err);
+      alert("⚠️ Language file could not be loaded.");
     }
   }
 
-  // ربط الأزرار
   if (langButtons.en) langButtons.en.addEventListener('click', () => setLanguage('en'));
   if (langButtons.ar) langButtons.ar.addEventListener('click', () => setLanguage('ar'));
 
-  // تحميل اللغة الافتراضية
-  setLanguage('en');
+  // تحميل اللغة الافتراضية أو المحفوظة
+  const savedLang = localStorage.getItem("preferredLang") || "en";
+  setLanguage(savedLang);
 });
